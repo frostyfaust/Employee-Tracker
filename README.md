@@ -44,7 +44,7 @@ This application is run through the index.js terminal utilizing node.js
 - run `node index.js`
 - navigate through the list and follow any prompts that is asked.
 - once finished with application. select `quit` to return to the terminal.
-- 
+
 ## License
 
 N/A
