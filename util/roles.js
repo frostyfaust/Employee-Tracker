@@ -23,7 +23,6 @@ const viewRoles = (init) =>{
 const deptNames = (init)=>{
 department.grabDept().then(([rows])=>{
     dept = rows.map(({id, names})=>{
-       console.log(id, names);
        return{
            value: id,
            name: names

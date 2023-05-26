@@ -6,18 +6,18 @@ let role;
 let managers;
 let rowOfRoles;
 let existingEmployess;
+let employeeQuery = `SELECT employees.id, employees.first_name, employees.last_name, roles.title, department.names AS department, roles.salary, 
+CONCAT(manager.first_name, " ", manager.last_name) AS manager FROM employees 
+LEFT JOIN roles ON employees.role_id = roles.id 
+LEFT JOIN department ON roles.department_id = department.id 
+LEFT JOIN employees manager ON employees.manager_id = manager.id`;
 
 const grabEmployees = () => {
   return db.promise().query(`SELECT * FROM employees`);
 };
 
 const viewEmployees = (init) => {
-  db.query(
-    `SELECT employees.id, employees.first_name, employees.last_name, roles.title, department.names AS department, roles.salary, 
-    CONCAT(manager.first_name, " ", manager.last_name) AS manager FROM employees 
-    LEFT JOIN roles ON employees.role_id = roles.id 
-    LEFT JOIN department ON roles.department_id = department.id 
-    LEFT JOIN employees manager ON employees.manager_id = manager.id`,
+  db.query(employeeQuery,
     (err, result) => {
       if (err) {
         console.log(err);
@@ -154,7 +154,7 @@ const updateEmployeeInquiry = (init) => {
           if (err) {
             console.log(err);
           } else {
-            db.query(`SELECT * FROM employees`, (err, result) => {
+            db.query(employeeQuery, (err, result) => {
               err ? console.error(err) : console.table(result);
               init();
             });
