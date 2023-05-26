@@ -26,22 +26,25 @@ This project utilizes SQL and inquirer to create a database for a theoretical co
 
 ## Installation
 
-- run `npm install` to add the required dependencies
-
-other required installation:
-- Node.js
-
-    
-## Usage
-
-This application is run through the index.js terminal utilizing node.js
-- before you start this application, run `npm install` to add the required dependendies.
+- run `npm install` to add the required dependendies.
 - log into mysql through your terminal by running `mysql -u <user> -p`
 - once logged into mysql, run `SOURCE db/schema.sql`, then `SOURCE db/seeds.sql` and then you can `quit` out of mysql
 - you must update the `.env.EXAMPLE` file to include your mysql username and password and rename the file to `.env`
 - to start this application, run `node index.js` within your terminal.
 - once you're finished, select quit to exit the application.
 
+other required installation:
+- Node.js
+- MySQL
+
+    
+## Usage
+
+This application is run through the index.js terminal utilizing node.js
+- run `node index.js`
+- navigate through the list and follow any prompts that is asked.
+- once finished with application. select `quit` to return to the terminal.
+- 
 ## License
 
 N/A
