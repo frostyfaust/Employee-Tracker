@@ -2,7 +2,7 @@
 
 ## Description
 
-This project utilizes SQL and inquirer to create a database for a theoretical company which help keep track of their employees and their information. This application creates an interactive command-line interface that allows users to easily utilize the company's database.
+This project utilizes SQL and inquirer to create a database for a theoretical company which helps keep track of their employees. This application creates an interactive command-line interface that allows users to easily utilize the company's database.
 
 ## Mock Video
 
